@@ -4,7 +4,7 @@ A web-based implementation of the classic Family Feud game for two players.
 
 ## Play Online
 
-You can play the game online at: [https://YOUR_USERNAME.github.io/family-feud/](https://YOUR_USERNAME.github.io/family-feud/)
+🎮 **[Play the game now!](https://parsaprojects.github.io/family-feud/)**
 
 ## Features
 
