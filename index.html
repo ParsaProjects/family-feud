@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Feud - 2 Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Family Feud</h1>
+        
+        <div id="game-setup" class="game-setup">
+            <div class="setup-form">
+                <div class="player-inputs">
+                    <div class="player-input">
+                        <label for="player1-name">Player 1 Name:</label>
+                        <input type="text" id="player1-name" placeholder="Enter Player 1 name" maxlength="20">
+                    </div>
+                    <div class="player-input">
+                        <label for="player2-name">Player 2 Name:</label>
+                        <input type="text" id="player2-name" placeholder="Enter Player 2 name" maxlength="20">
+                    </div>
+                </div>
+                <div class="question-input">
+                    <label for="question-count">Number of Questions (1-20):</label>
+                    <input type="number" id="question-count" min="1" max="20" value="5">
+                </div>
+                <button id="start-game">Start Game</button>
+            </div>
+        </div>
+
+        <div id="game-board" style="display: none;">
+            <div class="scores">
+                <div id="player1" class="player-score">
+                    <h2 class="player-name">Player 1</h2>
+                    <div class="score">0</div>
+                </div>
+                <div id="player2" class="player-score">
+                    <h2 class="player-name">Player 2</h2>
+                    <div class="score">0</div>
+                </div>
+            </div>
+
+            <div class="turn-indicator">
+                <div class="current-turn">Player 1's Turn</div>
+            </div>
+
+            <div class="game-board">
+                <div class="question-container">
+                    <h3 id="current-question">Press Start to Begin!</h3>
+                    <div id="questions-remaining" class="question-counter"></div>
+                </div>
+                <div class="answers-container">
+                    <div class="answer" id="answer1">
+                        <span class="number">1</span>
+                        <span class="text hidden">Answer 1</span>
+                        <span class="points hidden">0</span>
+                    </div>
+                    <div class="answer" id="answer2">
+                        <span class="number">2</span>
+                        <span class="text hidden">Answer 2</span>
+                        <span class="points hidden">0</span>
+                    </div>
+                    <div class="answer" id="answer3">
+                        <span class="number">3</span>
+                        <span class="text hidden">Answer 3</span>
+                        <span class="points hidden">0</span>
+                    </div>
+                    <div class="answer" id="answer4">
+                        <span class="number">4</span>
+                        <span class="text hidden">Answer 4</span>
+                        <span class="points hidden">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <input type="text" id="answer-input" placeholder="Enter your answer...">
+                <button id="submit-answer">Submit Answer</button>
+                <button id="pass">Pass</button>
+                <button id="skip-question">Skip Question</button>
+            </div>
+
+            <div class="strikes">
+                <span class="strike">X</span>
+                <span class="strike">X</span>
+                <span class="strike">X</span>
+            </div>
+        </div>
+
+        <div id="game-over" style="display: none;" class="game-over">
+            <h2>Game Over!</h2>
+            <div id="final-scores"></div>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <script src="familyFeudQuestions.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
